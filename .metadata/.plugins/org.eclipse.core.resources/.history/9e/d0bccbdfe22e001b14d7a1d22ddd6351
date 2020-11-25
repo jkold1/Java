@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class SweetProgram {
+
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+		Scanner scan = new Scanner(System.in);
+		String s = scan.nextLine();
+		
+		if(s.equals("Hieu")) {
+			System.out.println("Hey Hieu Ha");
+		}else if(s.equals("Bitch")) {
+			System.out.println("Hey Bitch");
+		}else {
+			System.out.println("You're not welcome here");
+		}
+		scan.close();
+	}
+
+}
