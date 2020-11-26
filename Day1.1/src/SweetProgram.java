@@ -1,26 +1,29 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.ListIterator;
 import java.util.Scanner;
 
 public class SweetProgram {
 
 	public static void main(String[] args) throws FileNotFoundException {
-		Scanner scan = new Scanner(new File("student.txt"));
 		
-		List<String> student = new ArrayList<String>();
+		LinkedList<String> names = new LinkedList<String>();
+		names.push("Caleb");
+		names.push("Sally");
+		names.push("LeBron");
 		
-		while(scan.hasNextLine()) {
-			student.add(scan.nextLine());
+		ListIterator<String> it = names.listIterator();
+		it.next();
+		it.next();
+		it.add("Susan");
+		
+		for(String s: names) {
+			System.out.println(s);
 		}
-		
-		for(int i = 0;i<student.size();i++) {
-			System.out.println("name: "+ student.get(i));
-		}
-		
-		scan.close();
-		
 	}
 
 }
